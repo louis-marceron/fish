@@ -22,9 +22,6 @@ export PATH="$PATH":"$HOME/.pub-cache/bin"
 alias ls "eza"
 alias mux "tmuxinator"
 
-# Key Binding
-bind \ca nvims
-
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
@@ -70,9 +67,13 @@ set --export PATH $HOME/bin $PATH
 
 alias nvim-kickstart 'env NVIM_APPNAME="kickstart-nvim" nvim'
 
-fish_vi_key_bindings
-# Fix CTRL + F not working
-bind -M insert \cf forward-char
+# # fish_vi_key_bindings
+# # # Fix CTRL + F not working
+# # bind -M insert \cf forward-char
+#
+# bind \cp previous-history
+# bind \cn next-history
+fish_default_key_bindings
 
 # Must stay at the end of the file
 zoxide init --cmd cd fish | source
